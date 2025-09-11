@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const professions = [
       "Full Stack Developer",
       "UI/UX Designer",
-      "Internet of Things Engineer",
+      "IOT Engineer",
     ];
     let professionIndex = 0;
     let charIndex = 0;
