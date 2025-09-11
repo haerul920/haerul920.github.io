@@ -1,0 +1,236 @@
+.card-image {
+  height: 200px;
+  background-color: #334a6d; /* Warna fallback jika gambar gagal dimuat */
+
+  /* Properti baru untuk menampilkan gambar dengan benar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease; /* Transisi untuk efek hover */
+}
+
+/* Efek hover zoom pada gambar saat kartu di-hover */
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+/* KODE BARU DENGAN KARTU LEBIH TINGGI */
+.blog-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* NAIKKAN NILAI INI UNTUK MENAMBAH TINGGI KARTU */
+  grid-auto-rows: minmax(300px, auto);
+  gap: 1.5rem;
+}
+/* ======================================================= */
+/* === STYLE KHUSUS UNTUK HALAMAN POSTINGAN BLOG === */
+/* ======================================================= */
+
+/* ...DENGAN KODE BARU INI */
+
+.blog-post-container {
+  /* atau .article-full-content */
+  max-width: 1125px;
+  margin: 2rem auto;
+  /* Padding dihapus dari sini agar gambar bisa memenuhi lebar penuh */
+  padding: 0;
+}
+
+/* Beri padding ke setiap anak elemennya agar sejajar */
+.blog-post-header,
+.post-content,
+.post-footer {
+  padding: 0 2rem; /* Padding hanya di kiri dan kanan */
+}
+
+/* KODE BARU YANG DIPERBAIKI (ANTI GEPENG) */
+
+.post-featured-image {
+  /* Ini adalah div kontainer gambar */
+  position: relative; /* Penting untuk menjaga children di dalamnya */
+  width: 100%; /* Memastikan kontainer memiliki lebar penuh */
+  /* Atur tinggi kontainer gambar agar konsisten */
+  height: 400px; /* <--- ATUR TINGGI INI SESUAI KEINGINAN ANDA (misal: 300px, 400px) */
+  margin-bottom: 1.5rem;
+  overflow: hidden; /* Pastikan gambar tidak keluar dari batas ini */
+  border-radius: 12px; /* Aplikasikan border-radius pada kontainer */
+
+  /* Jika Anda ingin gambar full-width melewati padding teks, aktifkan ini: */
+  /* margin-left: -2rem;
+    margin-right: -2rem; */
+}
+
+.post-featured-image img {
+  /* Gambar di dalamnya akan mengisi penuh kontainer di atas */
+  position: absolute; /* Menghilangkan gambar dari alur normal */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* KUNCI: Membuat gambar mengisi penuh tinggi dan lebar kontainer */
+  object-fit: cover; /* KUNCI: Menjaga aspek rasio dan memotong jika perlu */
+  object-position: center; /* Posisikan bagian tengah gambar */
+  /* Hapus border-radius dari sini karena sudah di kontainer */
+  /* border-radius: 12px; */
+}
+
+/* KODE BARU DENGAN JARAK LEBIH RAPAT */
+.post-content p {
+  font-size: 1.1rem;
+  line-height: 1.6; /* <-- Nilai dikecilkan agar lebih rapat */
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: justify; /* Menjaga agar teks tetap rata kanan-kiri */
+}
+
+.blog-post-header .post-category {
+  color: var(--primary-color-start);
+  font-weight: 600;
+  margin-bottom: 0;
+  display: block;
+}
+
+.blog-post-header .post-title {
+  font-size: 3rem;
+  color: var(--heading-color);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.blog-post-header .post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-featured-image {
+  margin-bottom: 2.5rem;
+}
+
+/* KODE BARU di blog-post.css dengan jarak lebih rapat */
+.post-content p {
+  font-size: 1.1rem;
+  line-height: 1.6; /* <-- Nilai dikecilkan agar lebih rapat */
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: justify; /* Menjaga agar teks tetap rata kanan-kiri */
+}
+.post-content h2,
+.post-content h3 {
+  color: var(--heading-color);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.post-content h2 {
+  font-size: 2rem;
+}
+.post-content h3 {
+  font-size: 1.6rem;
+}
+
+.post-content blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--card-color);
+  border-left: 5px solid var(--primary-color-start);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.post-content a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.post-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share-buttons span {
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.share-buttons a {
+  font-size: 1.8rem;
+  margin: 0 0.5rem;
+  color: var(--secondary-color);
+}
+
+.back-to-blog a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .blog-post-header .post-title {
+    font-size: 2.2rem;
+  }
+  .post-footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+/* ======================================================= */
+/* === PERBAIKAN: KONTEN HILANG DI BALIK BACKGROUND === */
+/* ======================================================= */
+
+/* Angkat semua konten utama ke layer di atasnya */
+.header,
+main,
+.footer {
+  position: relative; /* Membuat konteks tumpukan baru untuk setiap bagian */
+  z-index: 1; /* Memastikan layer ini berada di atas background */
+}
+/* ======================================================= */
+/* === PERBAIKAN: MENGURANGI JARAK ATAS DI HALAMAN BLOG === */
+/* ======================================================= */
+
+/* Targetkan secara spesifik HANYA section dengan ID "blog-posts" */
+section#blog-posts {
+  padding-top: 1rem; /* Kurangi jarak atas dari 6rem menjadi 3rem */
+}
+/* ======================================================= */
+/* === PERBAIKAN FINAL: JARAK ATAS KONTEN BLOG POST === */
+/* ======================================================= */
+
+/* Targetkan secara spesifik kontainer utama di halaman blog post */
+body .blog-post-container {
+  /* Paksa jarak atas menjadi lebih kecil */
+  margin-top: 0 !important;
+}
+/* === STYLE UNTUK TOMBOL SHARE & FEEDBACK === */
+.share-buttons {
+  position: relative; /* Diperlukan untuk posisi feedback */
+}
+
+.copy-feedback {
+  position: absolute;
+  right: -10px;
+  top: -35px;
+  background-color: var(--primary-color-start);
+  color: var(--bg-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.copy-feedback.show {
+  opacity: 1;
+  visibility: visible;
+}

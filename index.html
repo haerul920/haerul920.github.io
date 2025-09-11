@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haerul Algifar</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/homeblog.css"
+      <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="tsparticles"></div>
+    <canvas id="cursorCanvas"></canvas>
+
+    <header class="header">
+      <a href="index.html" class="logo">Haerul Algifar</a>
+      <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="articles.html">Article</a>
+        <a href="blog.html">Blog</a>
+        <a href="products.html">Product</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="theme-toggle" id="theme-toggle-button">
+        <i class="bx bxs-sun"></i>
+      </div>
+    </header>
+    <div class="mobile-unsupported-message">
+      <div class="message-box">
+        <i class="bx bx-mobile-alt"></i>
+        <h2>Tampilan Tidak Didukung</h2>
+        <p>
+          Untuk pengalaman terbaik, silakan akses situs ini melalui perangkat
+          Tablet atau Desktop.
+        </p>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content" data-aos="fade-right">
+          <h4>Hello World! I Am</h4>
+          <h1>Haerul Algifar</h1>
+          <h3>I'm a <span id="animated-text"></span></h3>
+          <p>No one is born stupid, we are all born with ignorance.</p>
+          <div class="hero-buttons">
+            <a href="about.html" class="btn">About Me</a>
+            <a href="#cv" class="btn btn-secondary">Download My CV</a>
+          </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+          <img src="assets/images/hero-image.png" alt="Illustration" />
+        </div>
+        <a href="#articles" class="scroll-down-arrow" aria-label="Scroll down">
+          <i class="bx bx-chevron-down"></i>
+        </a>
+      </section>
+
+      <section class="content-section" id="articles" data-aos="fade-up">
+        <div class="section-header">
+          <h2>My Articles</h2>
+          <a href="articles.html" class="view-more">
+            View More <i class="bx bx-right-arrow-alt"></i>
+          </a>
+        </div>
+        <div class="article-list">
+          <a href="article/pendidikan.html" class="article-item">
+            <img
+              src="/assets/images/article1.png"
+              alt="pendidikan"
+              class="article-img"
+            />
+            <div class="article-item-content">
+              <h3>
+                Jumlah Sekolah Tidak Mengikuti Kualitas Tenaga Pendidik dan
+                Hasil Belajar Siswa
+              </h3>
+              <p>
+                Indonesia dikenal sebagai negara dengan jumlah sekolah yang
+                sangat banyak, tersebar dari pelosok desa hingga kota besar...
+              </p>
+            </div>
+          </a>
+
+          <a href="article/iot.html" class="article-item">
+            <img
+              src="/assets/images/article2.png"
+              alt="iot"
+              class="article-img"
+            />
+            <div class="article-item-content">
+              <h3>
+                Revolusi Digital dengan Internet of Things Mengubah Dunia
+                Sekarang
+              </h3>
+              <p>
+                Di era digital yang terus berkembang pesat, Internet of Things
+                (IoT) telah menjadi salah satu teknologi paling penting yang
+                mengubah cara manusia hidup, bekerja, dan berinteraksi...
+              </p>
+            </div>
+          </a>
+
+          <a href="article/cybersecurity.html" class="article-item">
+            <img
+              src="/assets/images/article3.png"
+              alt="syber security"
+              class="article-img"
+            />
+            <div class="article-item-content">
+              <h3>Pentingnya Cybersecurity di Era Digital</h3>
+              <p>
+                Di era digital yang semakin maju, cybersecurity atau keamanan
+                siber menjadi kebutuhan mutlak bagi individu, perusahaan, dan
+                bahkan negara...
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="content-section" id="blog" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Blog Posts</h2>
+          <a href="blog.html" class="view-more"
+            >View More <i class="bx bx-right-arrow-alt"></i
+          ></a>
+        </div>
+        <div class="blog-container">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/profile-pict.jpg" alt="Blog Post" />
+            </div>
+            <div class="card-content">
+              <h4>Blog Post Title</h4>
+              <p>A brief description of the blog post content...</p>
+              <a href="/blog/"><button class="card-btn">Visit</button></a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/blog2.jpg" alt="Blog Post" />
+            </div>
+            <div class="card-content">
+              <h4>Blog Post Title</h4>
+              <p>A brief description of the blog post content...</p>
+              <button class="card-btn">Visit</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/blog3.jpg" alt="Blog Post" />
+            </div>
+            <div class="card-content">
+              <h4>Blog Post Title</h4>
+              <p>A brief description of the blog post content...</p>
+              <button class="card-btn">Visit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- Tambahkan wrapper footer-content -->
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Haerul Algifar</h3>
+          <p>Full Stack Developer</p>
+          <h3>Founder GeoIT</h3>
+          <p>Democracy, Science, Geology, and Informatics</p>
+        </div>
+
+        <div class="footer-cta">
+          <form class="email-form" id="footer-email-form">
+            <div class="email-form-inner">
+              <input
+                id="footer-email-input"
+                type="text"
+                placeholder="Write a short message..."
+              />
+              <button type="submit"><i class="bx bxs-paper-plane"></i></button>
+            </div>
+          </form>
+          <div class="social-links">
+            <a
+              href="https://www.tiktok.com/@geologyinformatics"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GeoIT"
+              class="social-logo-link"
+            >
+              <img
+                src="assets/images/geoit-logo.png"
+                alt="GeoIT Logo"
+                class="social-logo"
+              />
+            </a>
+            <a href="https://www.instagram.com/haerul_920/"
+              ><i class="bx bxl-instagram-alt"></i
+            ></a>
+            <a href="https://www.tiktok.com/@hrlgfr"
+              ><i class="bx bxl-tiktok"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/haerul920/"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+            <a href="https://github.com/haerul920"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://saweria.co/geoit"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Dukung Kami"
+            >
+              <i class="bx bxs-coffee-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        Copyright &copy; <span id="copyright-year"></span> Haerul Algifar. All
+        Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  </body>
+</html>

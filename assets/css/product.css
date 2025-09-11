@@ -1,0 +1,112 @@
+/* === STYLE UNTUK HARGA DISKON DI HALAMAN PRODUK === */
+
+.product-price {
+  /* Mengatur agar kedua harga tampil sejajar */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Posisikan di tengah */
+  gap: 10px; /* Jarak antara harga coret dan harga baru */
+  margin: 1rem 0;
+}
+
+.original-price {
+  font-size: 1rem; /* Ukuran lebih kecil */
+  color: var(--secondary-color); /* Warna lebih redup */
+  text-decoration: line-through; /* KUNCI: Memberi efek coret */
+}
+
+.discounted-price {
+  font-size: 1.5rem; /* Ukuran lebih besar dan menonjol */
+  font-weight: 600;
+  color: var(--primary-color-start); /* Warna aksen utama */
+}
+/* ======================================================= */
+/* === STYLE KARTU PRODUK (REVISI DENGAN GAMBAR FULL) === */
+/* ======================================================= */
+
+.card.product-card {
+  position: relative; /* Kunci utama untuk layering */
+  overflow: hidden; /* Pastikan tidak ada yang keluar dari sudut melengkung */
+  height: 420px; /* Tentukan tinggi kartu, sesuaikan jika perlu */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Mendorong konten teks ke bawah */
+  padding: 1.5rem;
+}
+
+/* Gambar Latar Belakang */
+.card.product-card .card-image {
+  position: absolute; /* Membuat gambar keluar dari alur normal */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease; /* Transisi untuk efek zoom saat hover */
+  z-index: 1; /* Layer paling bawah */
+}
+
+/* Overlay Gelap untuk Keterbacaan Teks */
+.card.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradasi dari bawah ke atas agar bagian bawah lebih gelap */
+  background: linear-gradient(
+    to top,
+    rgba(10, 25, 47, 0.9) 20%,
+    rgba(10, 25, 47, 0.2) 70%
+  );
+  z-index: 2; /* Layer di atas gambar, tapi di bawah teks */
+}
+
+/* Efek Hover: Zoom pada gambar latar */
+.card.product-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+/* Konten Teks */
+.card.product-card .card-content {
+  position: relative; /* Pastikan konten berada di atas gambar dan overlay */
+  z-index: 3;
+  text-align: left; /* Teks rata kiri agar lebih rapi */
+  width: 100%;
+}
+
+.card.product-card h4 {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  justify-content: flex-start; /* Harga rata kiri */
+}
+/* KODE BARU DENGAN TEKS DI TENGAH */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color-start),
+    var(--primary-color-end)
+  );
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #0a192f;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-align: center; /* <-- TAMBAHKAN BARIS INI */
+}
+/* KODE BARU DENGAN TOMBOL LEBIH TIPIS */
+.card-btn-buy {
+  width: 100%;
+  /* Kurangi nilai padding pertama (atas & bawah) */
+  padding: 8px 0;
+  font-size: 1rem;
+}
