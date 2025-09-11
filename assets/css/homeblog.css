@@ -11,7 +11,6 @@
   color: #fff;
 }
 
-/* jadikan gambar full background */
 .blog-card-image {
   position: absolute;
   inset: 0;
@@ -25,7 +24,6 @@
   display: block;
 }
 
-/* konten di atas gambar */
 .blog-card-content {
   position: relative;
   z-index: 2;

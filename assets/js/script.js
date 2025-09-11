@@ -1,5 +1,3 @@
-// KODE BARU untuk assets/js/script.js
-
 document.addEventListener("DOMContentLoaded", function () {
   // 1. Inisialisasi AOS (Animate On Scroll)
   AOS.init({
@@ -9,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 2. Animasi Teks Berganti (Typing Effect)
-  // Cari elemen animasi di halaman mana pun yang aktif
   const animatedTextElement =
     document.getElementById("animated-text") ||
     document.getElementById("animated-text-about");
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentProfession = professions[professionIndex];
 
       if (isDeleting) {
-        // Hapus karakter
         animatedTextElement.textContent = currentProfession.substring(
           0,
           charIndex - 1
@@ -42,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
           professionIndex = (professionIndex + 1) % professions.length;
         }
       } else {
-        // Tambah karakter
         animatedTextElement.textContent = currentProfession.substring(
           0,
           charIndex + 1
@@ -68,16 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50 && lastScrollY < window.scrollY) {
-      // Scroll ke bawah dan bukan di paling atas
       header.style.top = `-${header.offsetHeight}px`;
     } else {
-      // Scroll ke atas
       header.style.top = "0";
     }
     lastScrollY = window.scrollY;
   });
 });
-// ... (kode JS yang sudah ada sebelumnya) ...
 
 // 4. OTOMATISASI TAHUN PADA COPYRIGHT FOOTER
 document.addEventListener("DOMContentLoaded", function () {
@@ -86,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     copyrightYearElement.textContent = new Date().getFullYear();
   }
 });
-// ... (kode JS Anda yang sudah ada sebelumnya) ...
 
 // 5. LIGHT/DARK MODE TOGGLE
 document.addEventListener("DOMContentLoaded", function () {
@@ -94,10 +85,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
   const themeIcon = themeToggleButton.querySelector("i");
 
-  // Fungsi untuk mengubah tema dan ikon
   function setTheme(isLight) {
     body.classList.toggle("light-mode", isLight);
-    themeIcon.classList.add("changing"); // Tambah class untuk animasi keluar
+    themeIcon.classList.add("changing");
 
     setTimeout(() => {
       if (isLight) {
