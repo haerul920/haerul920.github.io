@@ -526,7 +526,7 @@ main {
 
 .card-image {
   width: 100%;
-  height: 180px;
+  height: 100px;
   border-radius: 8px 8px 0 0;
   object-fit: cover;
 }

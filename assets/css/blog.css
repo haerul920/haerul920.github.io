@@ -234,3 +234,22 @@ body .blog-post-container {
   opacity: 1;
   visibility: visible;
 }
+/* === STYLE UNTUK VIDEO DI DALAM POSTINGAN BLOG === */
+
+.post-video {
+  margin: 2.5rem 0; /* Memberi jarak atas-bawah */
+  padding: 0;
+}
+
+.post-video video {
+  border-radius: 12px; /* Memberi sudut melengkung pada video */
+  background-color: #000; /* Background hitam jika video butuh waktu loading */
+}
+
+.post-video figcaption {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
