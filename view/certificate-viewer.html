@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product - Haerul Algifar</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/product.css" />
+    <title>Certificate Viewer - Haerul Algifar</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -21,83 +19,37 @@
     <div id="tsparticles"></div>
     <canvas id="cursorCanvas"></canvas>
     <header class="header">
-      <a href="index.html" class="logo">Haerul Algifar</a>
+      <a href="../index.html" class="logo">Haerul Algifar</a>
       <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="articles.html">Article</a>
-        <a href="blog.html">Blog</a>
-        <a href="achievement.html">Achievement</a>
-        <a href="products.html" class="active">Product</a>
-        <a href="about.html">About Me</a>
-        <a href="contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="../articles.html">Article</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../achievement.html" class="active">Achievement</a>
+        <a href="../products.html">Product</a>
+        <a href="../about.html">About Me</a>
+        <a href="../contact.html">Contact</a>
       </nav>
       <!--<div class="theme-toggle" id="theme-toggle-button">
-        <i class="bx bxs-sun"></i>-->
-      </div>
+        <i class="bx bxs-sun"></i>
+      </div>-->
     </header>
-    <div class="mobile-unsupported-message">
-      <div class="message-box">
-        <i class="bx bx-mobile-alt"></i>
-        <h2>Tampilan Tidak Didukung</h2>
-        <p>
-          Untuk pengalaman terbaik, silakan akses situs ini melalui perangkat
-          Tablet atau Desktop.
-        </p>
-      </div>
-    </div>
-    <main class="page-container">
-      <section class="content-section" id="products-page" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Digital Products</h2>
-          <a href="contact.html" class="btn">Need Help?</a>
-        </div>
-        <div class="card-grid">
-          <!-- Card 1 -->
-          <div class="card product-card">
-            <div
-              class="card-image"
-              style="background-image: url('assets/images/product1.webp')"
-            ></div>
-            <div class="card-content">
-              <h4>
-                B.J. Habibie: Sang Jenius di Balik Teknologi dan Demokrasi
-                Indonesia
-              </h4>
-              <div class="product-price">
-                <span class="original-price">Rp59.999</span>
-                <span class="discounted-price">Rp40.000</span>
-              </div>
-              <a
-                href="http://lynk.id/geologyinformatics/k4jn823j33yk/checkout"
-                target="_blank"
-                class="btn card-btn-buy"
-                >Buy Now</a
-              >
-            </div>
-          </div>
 
-          <div class="card product-card">
-            <div
-              class="card-image"
-              style="background-image: url('assets/images/product2.webp')"
-            ></div>
-            <div class="card-content">
-              <h4>
-                Dari Kegelapan ke Cahaya Peradaban Islam yang Menyinari Dunia
-                Barat
-              </h4>
-              <div class="product-price">
-                <span class="original-price">Rp119.000</span>
-                <span class="discounted-price">Rp42.000</span>
-              </div>
-              <a
-                href="http://lynk.id/geologyinformatics/740wk56zwgel/checkout"
-                target="_blank"
-                class="btn card-btn-buy"
-                >Buy Now</a
-              >
-            </div>
-          </div>
+    <main class="page-container">
+      <section class="content-section" id="certificate-viewer-section">
+        <div class="section-header">
+          <h2>Certificate Preview</h2>
+          <a href="../achievement.html" class="btn btn-secondary">
+            <i class="bx bx-left-arrow-alt"></i> Back to Achievements
+          </a>
+        </div>
+        <div class="pdf-container">
+          <embed
+            id="pdf-viewer"
+            src=""
+            type="application/pdf"
+            width="100%"
+            height="800px"
+          />
         </div>
       </section>
     </main>
@@ -132,7 +84,7 @@
               class="social-logo-link"
             >
               <img
-                src="assets/images/geoit-logo.png"
+                src="/assets/images/geoit-logo.png"
                 alt="GeoIT Logo"
                 class="social-logo"
               />
@@ -168,7 +120,24 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfFile = urlParams.get("file");
+        const pdfViewer = document.getElementById("pdf-viewer");
+
+        if (pdfFile && pdfViewer) {
+          // Path BENAR, sekarang mencari di folder achievement
+          const pdfPath = `../achievement/${pdfFile}`;
+          pdfViewer.setAttribute("src", pdfPath);
+        } else {
+          document.querySelector(".pdf-container").innerHTML =
+            '<p style="text-align: center;">Certificate not found or invalid link.</p>';
+        }
+      });
+    </script>
+
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>

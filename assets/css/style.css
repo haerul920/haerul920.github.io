@@ -1063,3 +1063,22 @@ body {
     line-height: 1.6;
   }
 }
+/* === STYLE UNTUK TOMBOL REPORT (REVISI) === */
+.btn-report {
+  /* Mengubah background menjadi gradasi merah */
+  background: linear-gradient(90deg, #ff5252, #e53935);
+  color: #ffffff;
+
+  /* Menata ikon dan teks agar sejajar */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Jarak antara ikon dan teks */
+}
+
+.btn-report:hover {
+  /* Gradasi sedikit lebih gelap saat hover */
+  background: linear-gradient(90deg, #e53935, #c62828);
+  box-shadow: 0 0 20px rgba(229, 57, 53, 0.5);
+  color: #ffffff;
+}
