@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achievement - Haerul Algifar</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/posts.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="tsparticles"></div>
+    <canvas id="cursorCanvas"></canvas>
+    <header class="header">
+      <a href="/index.html" class="logo">Haerul Algifar</a>
+      <nav class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/articles.html">Article</a>
+        <a href="/achievement.html" class="active">Achievement</a>
+        <a href="/products.html">Product</a>
+        <a href="/about.html">About Me</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <!--<div class="theme-toggle" id="theme-toggle-button">
+        <i class="bx bxs-sun"></i>
+      </div>-->
+    </header>
+    <div class="mobile-unsupported-message">
+      <div class="message-box">
+        <i class="bx bx-mobile-alt"></i>
+        <h2>Tampilan Tidak Didukung</h2>
+        <p>
+          Untuk pengalaman terbaik, silakan akses situs ini melalui perangkat
+          Tablet atau Desktop.
+        </p>
+      </div>
+    </div>
+
+    <main class="page-container">
+      <section class="content-section" id="blog-page" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Blog Posts</h2>
+          <div class="header-buttons">
+            <a href="/contact.html" class="btn btn-report">
+              <i class="bx bxs-error-circle"></i> Report
+            </a>
+            <a href="../achievement.html" class="btn btn-secondary">
+              <i class="bx bx-left-arrow-alt"></i> Back
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-grid-container">
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img src="/assets/images/blog1-2.jpg" alt="Blog Post Image" />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Personal</span>
+              <h3 class="card-title">Smudama Never Ending Story</h3>
+              <span class="card-meta">By Haerul Algifar • 07 Sept 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img src="/assets/images/blog2-4.jpg" alt="Blog Post Image" />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Hike</span>
+              <h3 class="card-title">Mengejar Senja di Lembah Lohe</h3>
+              <span class="card-meta">By Haerul Algifar • 09 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img src="/assets/images/blog3-2.png" alt="Blog Post Image" />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Education</span>
+              <h3 class="card-title">
+                Memulai Langkah di Universitas Hasanuddin
+              </h3>
+              <span class="card-meta">By Haerul Algifar • 09 Sep 2025</span>
+            </div>
+          </a>
+
+          <!--<a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?programming,code"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Web Dev</span>
+              <h3 class="card-title">
+                Mengapa Belajar JavaScript di Tahun 2025?
+              </h3>
+              <span class="card-meta">By Haerul Algifar • 22 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?ui,design"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">UI/UX</span>
+              <h3 class="card-title">Prinsip Desain yang Baik untuk Pemula</h3>
+              <span class="card-meta">By Haerul Algifar • 19 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?technology"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Teknologi</span>
+              <h3 class="card-title">
+                Masa Depan AI: Apa yang Harus Disiapkan?
+              </h3>
+              <span class="card-meta">By Haerul Algifar • 15 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?nature,mountain"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Personal</span>
+              <h3 class="card-title">Pelajaran dari Mendaki Gunung</h3>
+              <span class="card-meta">By Haerul Algifar • 12 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?python,data"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Tutorial</span>
+              <h3 class="card-title">
+                Visualisasi Data Sederhana dengan Python
+              </h3>
+              <span class="card-meta">By Haerul Algifar • 10 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?book,library"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Review</span>
+              <h3 class="card-title">5 Buku yang Mengubah Cara Pikir Saya</h3>
+              <span class="card-meta">By Haerul Algifar • 08 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new">
+            <div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?css,frontend"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Web Dev</span>
+              <h3 class="card-title">Trik CSS Modern yang Wajib Kamu Coba</h3>
+              <span class="card-meta">By Haerul Algifar • 05 Sep 2025</span>
+            </div>
+          </a>
+
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?productivity"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Growth</span>
+              <h3 class="card-title">
+                Meningkatkan Produktivitas sebagai Developer
+              </h3>
+              <span class="card-meta">By Haerul Algifar • 02 Sep 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?freelance"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Karir</span>
+              <h3 class="card-title">Tips Memulai Karir sebagai Freelancer</h3>
+              <span class="card-meta">By Haerul Algifar • 30 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?security"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Teknologi</span>
+              <h3 class="card-title">Dasar-Dasar Keamanan Siber untuk Umum</h3>
+              <span class="card-meta">By Haerul Algifar • 27 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?project,management"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Profesional</span>
+              <h3 class="card-title">Manajemen Proyek untuk Tim Kecil</h3>
+              <span class="card-meta">By Haerul Algifar • 24 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?minimalism"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Personal</span>
+              <h3 class="card-title">Gaya Hidup Minimalis di Era Digital</h3>
+              <span class="card-meta">By Haerul Algifar • 21 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?api"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Tutorial</span>
+              <h3 class="card-title">Memahami Konsep API dengan Mudah</h3>
+              <span class="card-meta">By Haerul Algifar • 18 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?coffee,desk"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Lifestyle</span>
+              <h3 class="card-title">Setup Meja Kerja Ideal untuk Koding</h3>
+              <span class="card-meta">By Haerul Algifar • 15 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?git,github"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Web Dev</span>
+              <h3 class="card-title">Perintah Git yang Sering Terlupakan</h3>
+              <span class="card-meta">By Haerul Algifar • 12 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?space,galaxy"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">Sains</span>
+              <h3 class="card-title">
+                Misteri Luar Angkasa yang Belum Terpecahkan
+              </h3>
+              <span class="card-meta">By Haerul Algifar • 09 Aug 2025</span>
+            </div></a
+          >
+          <a href="#" class="blog-card-new"
+            ><div class="card-image-container">
+              <img
+                src="https://source.unsplash.com/random/400x225?figma,tool"
+                alt="Blog Post Image"
+              />
+            </div>
+            <div class="card-content-new">
+              <span class="card-category">UI/UX</span>
+              <h3 class="card-title">
+                Dari Desain ke Kode: Figma untuk Developer
+              </h3>
+              <span class="card-meta">By Haerul Algifar • 06 Aug 2025</span>
+            </div></a
+          >-->
+        </div>
+
+        <!--<nav class="pagination" aria-label="Page navigation">
+          <a href="#" class="disabled"><i class="bx bx-chevron-left"></i></a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">...</a>
+          <a href="#">10</a>
+          <a href="#"><i class="bx bx-chevron-right"></i></a>
+        </nav>-->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!--  wrapper footer-content -->
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Haerul Algifar</h3>
+          <p>Full Stack Developer</p>
+          <h3>Founder GeoIT</h3>
+          <p>Democracy, Science, Geology, and Informatics</p>
+        </div>
+
+        <div class="footer-cta">
+          <form class="email-form" id="footer-email-form">
+            <div class="email-form-inner">
+              <input
+                id="footer-email-input"
+                type="text"
+                placeholder="Write a short message..."
+              />
+              <button type="submit"><i class="bx bxs-paper-plane"></i></button>
+            </div>
+          </form>
+          <div class="social-links">
+            <a
+              href="https://www.tiktok.com/@geologyinformatics"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GeoIT"
+              class="social-logo-link"
+            >
+              <img
+                src="/assets/images/geoit-logo.png"
+                alt="GeoIT Logo"
+                class="social-logo"
+              />
+            </a>
+            <a href="https://www.instagram.com/haerul_920/" target="_blank"
+              ><i class="bx bxl-instagram-alt"></i
+            ></a>
+            <a href="https://www.tiktok.com/@hrlgfr" target="_blank"
+              ><i class="bx bxl-tiktok"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/haerul920/" target="_blank"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+            <a href="https://github.com/haerul920" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://saweria.co/geoit"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Dukung Kami"
+            >
+              <i class="bx bxs-coffee-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        Copyright &copy; <span id="copyright-year"></span> Haerul Algifar. All
+        Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  </body>
+</html>

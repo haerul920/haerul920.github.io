@@ -1,0 +1,117 @@
+/* portfolio-website/assets/css/blog-page.css */
+
+.blog-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem; /* Jarak ke pagination */
+}
+
+.blog-card-new {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Menghilangkan garis bawah dari link */
+}
+
+.blog-card-new:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.card-image-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog-card-new:hover .card-image-container img {
+  transform: scale(1.05);
+}
+
+.card-content-new {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-category {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  background: var(--primary-color-start);
+  align-self: flex-start; /* Membuat tag tidak full-width */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  margin-top: auto; /* Mendorong meta ke bagian bawah kartu */
+  padding-top: 1rem;
+}
+
+/* === PAGINATION STYLES === */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pagination a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-color);
+  color: var(--text-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+  background: var(--primary-color-start);
+  border-color: var(--primary-color-start);
+  color: var(--bg-color);
+}
+
+.pagination a.active {
+  background: var(--primary-color-start);
+  border-color: var(--primary-color-start);
+  color: var(--bg-color);
+  cursor: default;
+}
+
+.pagination a.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

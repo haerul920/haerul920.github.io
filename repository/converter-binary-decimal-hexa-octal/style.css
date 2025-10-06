@@ -3,7 +3,7 @@
   --bg-2: #1a0026;
   --panel: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.06);
-  --accent: ;
+  --accent: #7a48ff;
   --accent-2: #7a48ff;
   --muted: #bdb2cf;
   --white: #f6f3ff;
@@ -364,15 +364,16 @@ input:focus {
   color: white;
 }
 
-.btn-primary {
+/* Ganti menjadi seperti ini */
+.tiny.btn-primary {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: #0b0013;
+  color: #0b0013; /* Warna teks gelap agar kontras */
   font-weight: 600;
   border: 1px solid rgba(255, 255, 255, 0.01);
   box-shadow: 0 4px 15px rgba(122, 72, 255, 0.1);
 }
-.btn-primary:hover {
-  color: var(--white);
+.tiny.btn-primary:hover {
+  color: var(--white); /* Ubah warna teks menjadi putih saat disentuh */
   background: linear-gradient(90deg, var(--accent-2), var(--accent));
   box-shadow: 0 6px 20px rgba(122, 72, 255, 0.15);
 }
