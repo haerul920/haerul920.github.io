@@ -199,7 +199,7 @@ main,
 
 /* Targetkan secara spesifik HANYA section dengan ID "blog-posts" */
 section#blog-posts {
-  padding-top: 1rem; /* Kurangi jarak atas dari 6rem menjadi 3rem */
+  padding-top: 0rem; /* Kurangi jarak atas dari 6rem menjadi 3rem */
 }
 /* ======================================================= */
 /* === PERBAIKAN FINAL: JARAK ATAS KONTEN BLOG POST === */

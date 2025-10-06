@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-g" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cosmic Converter — Binary ↔ Decimal & More</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="starCanvas" class="stars"></canvas>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="title">Cosmic Converter</div>
+        <div class="subtitle" id="topSubtitle">
+          Binary ↔ Decimal ↔ Hex ↔ Octal
+        </div>
+      </div>
+
+      <div class="actions">
+        <div class="lang-toggle-switch">
+          <input type="checkbox" id="langToggle" class="lang-toggle-checkbox" />
+          <label for="langToggle" class="lang-toggle-label">
+            <span class="lang-label-en">EN</span>
+            <span class="lang-label-id">ID</span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <section class="panel converter-panel" aria-labelledby="converterTitle">
+        <h2 id="converterTitle" class="panel-title" data-i18n="converter.title">
+          Converter
+        </h2>
+
+        <form id="converterForm" autocomplete="off" onsubmit="return false;">
+          <label class="field">
+            <span class="field-label" data-i18n="label.binary">Biner</span>
+            <input
+              id="binary"
+              inputmode="numeric"
+              pattern="[0-1]*"
+              placeholder="Enter number..."
+              data-i18n-placeholder="placeholder.input"
+            />
+          </label>
+
+          <label class="field">
+            <span class="field-label" data-i18n="label.decimal">Desimal</span>
+            <input
+              id="decimal"
+              inputmode="numeric"
+              placeholder="Enter number..."
+              data-i18n-placeholder="placeholder.input"
+            />
+          </label>
+
+          <label class="field">
+            <span class="field-label" data-i18n="label.hex">Heksa</span>
+            <input
+              id="hex"
+              inputmode="text"
+              placeholder="Enter number..."
+              data-i18n-placeholder="placeholder.input"
+            />
+          </label>
+
+          <label class="field">
+            <span class="field-label" data-i18n="label.oct">Oktal</span>
+            <input
+              id="octal"
+              inputmode="numeric"
+              placeholder="Enter number..."
+              data-i18n-placeholder="placeholder.input"
+            />
+          </label>
+
+          <div class="footer-row">
+            <div class="note" id="noteText" data-i18n="note.idle">
+              Ketik angka di salah satu kolom. Penjelasan muncul setelah selesai
+              mengetik.
+            </div>
+            <button
+              id="clearBtn"
+              class="btn-secondary"
+              type="button"
+              data-i18n="btn.clear"
+            >
+              Bersihkan
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="panel explanation-panel" aria-labelledby="explainTitle">
+        <div class="explain-top">
+          <h3 id="explainTitle" class="panel-title" data-i18n="explain.title">
+            Explanation
+          </h3>
+          <div class="status">
+            <div id="loading" class="loader hidden" aria-hidden="true"></div>
+            <button
+              id="downloadBtn"
+              class="tiny btn-primary"
+              data-i18n="btn.download"
+              title="Download explanation as .txt"
+            >
+              Download .txt
+            </button>
+            <div id="langBadge" class="lang-badge">EN</div>
+          </div>
+        </div>
+
+        <div
+          id="explainContent"
+          class="explain-content"
+          tabindex="0"
+          aria-live="polite"
+        >
+          <div class="placeholder" data-i18n="explain.placeholder">
+            Enter a number to see conversion steps. Explanation will start 2s
+            after you stop typing.
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <small>© Cosmic Converter • Designed By Haerul</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

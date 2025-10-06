@@ -93,3 +93,11 @@
     grid-template-columns: 1fr;
   }
 }
+/* ======================================================= */
+/* === PERBAIKAN: MENYAMAKAN JARAK ATAS HALAMAN ACHIEVEMENT === */
+/* ======================================================= */
+
+/* Targetkan secara spesifik HANYA section dengan ID "achievements" */
+section#achievements {
+  padding-top: 0rem; /* Mengurangi jarak atas dari 6rem menjadi 3rem */
+}
