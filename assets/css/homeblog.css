@@ -69,3 +69,6 @@
     grid-template-columns: 1fr;
   }
 }
+section#blog {
+  padding-top: 0rem; /* Kurangi jarak atas dari 6rem menjadi 3rem */
+}
