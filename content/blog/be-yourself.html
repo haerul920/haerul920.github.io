@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Haerul Algifar</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/blog.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="tsparticles"></div>
+    <canvas id="cursorCanvas"></canvas>
+
+    <header class="header">
+      <a href="/index.html" class="logo">Haerul Algifar</a>
+      <nav class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/articles.html">Article</a>
+        <a href="/achievement.html" class="active">Achievement</a>
+        <a href="/products.html">Product</a>
+        <a href="/about.html">About Me</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <!--<div class="theme-toggle" id="theme-toggle-button">
+        <i class="bx bxs-sun"></i>-->
+      </div>
+    </header>
+    <div class="mobile-unsupported-message">
+      <div class="message-box">
+        <i class="bx bx-mobile-alt"></i>
+        <h2>Tampilan Tidak Didukung</h2>
+        <p>
+          Untuk pengalaman terbaik, silakan akses situs ini melalui perangkat
+          Tablet atau Desktop.
+        </p>
+      </div>
+    </div>
+    <main>
+      <article class="blog-post-container" data-aos="fade-up">
+        <header class="blog-post-header">
+          <span class="post-category">Personal</span>
+          <h1 class="post-title">Be Yourself</h1>
+          <div class="post-meta">
+            <span>By Haerul Algifar</span>
+            <span>8 Oktober 2025</span>
+          </div>
+          <figure class="post-featured-image">
+            <img
+              src="/assets/images/blog/blog4-1.jpg"
+              alt="be yourself"
+            />
+          </figure>
+        </header>
+
+        <section class="post-content">
+          <p>
+            Semua orang memiliki perspektif yang berbeda-beda, apa yang kita lihat bisa saja berbeda dengan apa yang orang lain lihat. Masalahnya apa? Sebenarnya tidak begitu masalah, cuman banyak orang di luar sana yang tidak mengerti akan hal ini, mendengarkan perspektif orang lain itu bukan masalah malahan itu adalah hal yang baik, bisa menambah ilmu pengetahuan kita,
+            kita bisa mengeksplorasi banyak hal lebih jau, kita bisa tahu banyak karakter orang di luar sana. Nah... masalahnya adalah saat kita menerima ribuan perkataan orang lain tanpa kita saring perkataan yang kita dapatkan, toh mereka hanya tahu nama kita bukan mengenal kita. Kita adalah orang yang paling tahu siapa sih sebenarnya kita?
+          </p>
+          
+          <p>Kita tidak boleh dikendalikan oleh orang lain, kita memiliki hak sepenuhnya untuk memanufer diri kita, mau ke mana kita melangkah, mau sampai mana kita melangkah dan sejauh apa.</p>
+          <blockquote>“Kamu adalah kamu.”</blockquote>
+          <p>Saya sendiri sudah memiliki tekad yang kuat, semangat yang membara, dan tentunya saya punya ambisi, saya punya mimpi bahwa di kemudian hari saya bisa menjadi orang yang berbakat dan cerdas dalam bidang IT, bukan untuk tampil keren, bukan untuk merasa paling hebat, bukan untuk validasi tapi untuk bisa memberikan banyak manfaat bagi diri saya dan orang di sekitar saya.</p>
+          
+
+        <figure class="post-video">
+            <video width="100%" controls>
+                <source src="/assets/videos/blog-beyourself.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <figcaption>Source: Tiktok @brianrahmattio_</figcaption>
+        </figure>
+
+          <p>Terimakasih telah berkunjung di postingan blog saya, mohom maaf jika terdapat kesalahan penulisan dalam pembuatan blog ini...
+          </p>
+        </section>
+
+        <footer class="post-footer">
+          <div class="share-buttons">
+            <span>Bagikan:</span>
+            <a href="#" id="twitter-share-btn" target="_blank" title="Bagikan ke Twitter"><i class='bx bxl-twitter'></i></a>
+            <a href="#" id="linkedin-share-btn" target="_blank" title="Bagikan ke LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" id="whatsapp-share-btn" target="_blank" title="Bagikan ke WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#" id="copy-link-btn" title="Salin Link"><i class='bx bx-link'></i></a>
+            <span id="copy-feedback" class="copy-feedback">Link disalin!</span>
+          </div>
+          <div class="back-to-blog">
+            <a href="/view/post-viewer.html">
+              <i class="bx bx-left-arrow-alt"></i> Kembali ke Blog
+            </a>
+          </div>
+        </footer>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <!-- Tambahkan wrapper footer-content -->
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Haerul Algifar</h3>
+          <p>Full Stack Developer</p>
+          <h3>Founder GeoIT</h3>
+          <p>Democracy, Science, Geology, and Informatics</p>
+        </div>
+
+        <div class="footer-cta">
+          <form class="email-form" id="footer-email-form">
+            <div class="email-form-inner">
+              <input
+                id="footer-email-input"
+                type="text"
+                placeholder="Write a short message..."
+              />
+              <button type="submit"><i class="bx bxs-paper-plane"></i></button>
+            </div>
+          </form>
+          <div class="social-links">
+            <a
+              href="https://www.tiktok.com/@geologyinformatics"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GeoIT"
+              class="social-logo-link"
+            >
+              <img
+                src="/assets/images/geoit-logo.png"
+                alt="GeoIT Logo"
+                class="social-logo"
+              />
+            </a>
+            <a href="https://www.instagram.com/haerul_920/"
+              target="_blank"><i class="bx bxl-instagram-alt"></i
+            ></a>
+            <a href="https://www.tiktok.com/@hrlgfr"
+              target="_blank"><i class="bx bxl-tiktok"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/haerul920/"
+              target="_blank"><i class="bx bxl-linkedin-square"></i
+            ></a>
+            <a href="https://github.com/haerul920"
+              target="_blank"><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://saweria.co/geoit"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Dukung Kami"
+            >
+              <i class="bx bxs-coffee-alt"></i>
+            </a>
+          </div>
+        </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>
