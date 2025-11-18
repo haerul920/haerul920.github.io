@@ -1,45 +1,53 @@
 /* ======================================================= */
-/* === STYLE UNTUK SECTION PROJECTS                      === */
-/* ======================================================= */
-
-/* ======================================================= */
-/* === STYLE BARU: PROJECT CAROUSEL HORIZONTAL         === */
+/* === STYLE UNTUK SECTION PROJECTS (HORIZONTAL SCROLL) === */
 /* ======================================================= */
 
 .project-grid {
   display: flex; /* Mengubah layout menjadi flexbox */
   overflow-x: auto; /* KUNCI UTAMA: Memunculkan scrollbar horizontal saat konten meluap */
   flex-wrap: nowrap; /* Mencegah kartu pindah ke baris baru */
-  gap: 1rem;
+  gap: 2rem;
   padding: 1rem 0 2rem 0; /* Memberi sedikit ruang di bawah untuk scrollbar */
-  -webkit-overflow-scrolling: touch; /* Scrolling lebih mulus di perangkat mobile */
-  scrollbar-width: thin; /* Untuk Firefox */
-  scrollbar-color: var(--primary-color-start) var(--card-color); /* Untuk Firefox */
+
+  /* Agar scroll terasa halus di HP/Touchscreen */
+  -webkit-overflow-scrolling: touch;
+
+  /* Untuk Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color-start) var(--card-color);
 }
 
-/* Kustomisasi tampilan scrollbar untuk browser Chrome/Safari/Edge */
+/* === KUSTOMISASI SCROLLBAR (Supaya Muncul dan Bagus) === */
+
+/* Lebar/Tinggi Scrollbar */
 .project-grid::-webkit-scrollbar {
-  height: 10px; /* Tinggi scrollbar */
+  height: 10px; /* Tinggi scrollbar horizontal */
 }
 
+/* Track (Jalur lintasan scrollbar - warna gelap) */
 .project-grid::-webkit-scrollbar-track {
-  background: var(--card-color); /* Warna trek scrollbar */
+  background: var(--card-color);
   border-radius: 5px;
 }
 
+/* Thumb (Bagian yang bisa digeser - warna hijau) */
 .project-grid::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color-start); /* Warna gagang scrollbar */
+  background-color: var(--primary-color-start);
   border-radius: 5px;
-  border: 2px solid var(--card-color);
+  border: 2px solid var(--card-color); /* Memberi sedikit jarak/border */
 }
 
+/* Efek saat kursor diarahkan ke scrollbar */
 .project-grid::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-color-end);
 }
 
+/* === STYLE KARTU PROJECT === */
 .project-card {
   /* Mengatur agar lebar kartu tetap dan tidak menyusut */
-  flex: 0 0 340px; /* Lebar kartu 340px, tidak bisa grow, tidak bisa shrink */
+  flex: 0 0 335px;
+  max-width: 335px;
+
   background-color: var(--card-color);
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -49,7 +57,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Sisa kode .project-card lainnya biarkan saja (hover, image, content, dll) */
+/* Responsif: Kartu sedikit lebih kecil di layar HP */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 300px;
+  }
+}
 
 .project-card:hover {
   transform: translateY(-10px);
@@ -58,27 +71,27 @@
 
 .project-image {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Menjaga rasio gambar agar konsisten */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background-color: #1a3052; /* Warna placeholder jika gambar belum ada */
+  background-color: #1a3052;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Memastikan gambar mengisi area tanpa gepeng */
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.05); /* Efek zoom saat kartu di-hover */
+  transform: scale(1.05);
 }
 
 .project-content {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Membuat konten ini mengisi sisa ruang kartu */
+  flex-grow: 1;
 }
 
 .project-title {
@@ -92,31 +105,32 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  flex-grow: 1; /* Mendorong ikon & tombol ke bawah */
+  flex-grow: 1;
 }
 
 .project-tech-stack {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  font-size: 2rem; /* Ukuran ikon teknologi */
+  font-size: 2rem;
   color: var(--secondary-color);
 }
 
 .project-tech-stack i:hover {
-  color: var(--primary-color-start); /* Warna ikon berubah saat disentuh */
+  color: var(--primary-color-start);
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
-  margin-top: auto; /* Mendorong tombol ke bagian paling bawah */
+  margin-top: auto;
 }
 
 .project-links .btn {
-  flex: 1; /* Membuat kedua tombol memiliki lebar yang sama */
+  flex: 1;
   text-align: center;
 }
+
 section#projects {
-  padding-top: 0rem; /* Kurangi jarak atas dari 6rem menjadi 3rem */
+  padding-top: 6rem;
 }
